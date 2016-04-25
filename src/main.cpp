@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
   int b = 3;
   int* c = &a;
   int* d = &b;
-  std::size_t n = 10;
+  std::size_t n = 6;
 
   /**
    * create instances declared in the header files to test whether or not
@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
 
   dllist<int> blah({ 1,5,3,1,4 });
   dllist<int> something(n, 10);
-  // trying to use copy constructor: 725/726
+  // use copy constructor
   dllist<int> j(something);
   for (auto const& l : j) {
     std::cout << l << ' ';
