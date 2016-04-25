@@ -135,4 +135,4 @@ public:
 };
 #endif
 
-#endif
+#endif // #ifndef XORPTR_HXX

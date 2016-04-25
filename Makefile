@@ -28,20 +28,22 @@ DEPS 		:= $(OBJECTS:.o=.d)
 
 all: default
 
+clean:
+	rm $(OBJ_DIR)/*.o
+	rm $(BIN_DIR)/$(TARGET)
+
 default: $(BIN_DIR)/$(TARGET)
 	@./$(BIN_DIR)/$(TARGET)
 
 $(BIN_DIR)/$(TARGET): $(OBJECTS)
 	@mkdir -p $(@D)
 	$(CXX) $(OBJECTS) -g -Wall -o $@
+	rm -f $(OBJ_DIR)/*.o
 
 $(OBJECTS): $(OBJ_DIR)/%.o : $(SRC_DIR)/%.$(EXT)
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-clean:
-	rm $(OBJ_DIR)/*.o
-	rm $(BIN_DIR)/$(TARGET)
 
 debug: $(BIN_DIR)/$(TARGET)
 	valgrind $(DEBUG_FLAGS) $(BIN_DIR)/$(TARGET)
