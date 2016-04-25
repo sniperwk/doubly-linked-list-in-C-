@@ -6,8 +6,8 @@
 
 int main(int argc, char* argv[])
 {
-  int a = 4;
-  int b = 3;
+  int a = 1;
+  int b = 2;
   int* c = &a;
   int* d = &b;
   std::size_t n = 6;
@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
   std::cout << "address y ^ d: " << (y ^ d) << "\n";
 
 
-  dllist<int> blah({ 1,5,3,1,4 });
+  dllist<int> blah({ 1,5,6,2,8,10 });
   dllist<int> something(n, 10);
   // use copy constructor
   dllist<int> j(something);
