@@ -1,5 +1,5 @@
 #include <iostream>
-//#define CXX_XOR_PROJECT_USE_UINTPTR_T 1
+// #define CXX_XOR_PROJECT_USE_UINTPTR_T 1
 #define CXX_XOR_PROJECT_USE_REINTERPRET_CAST 1
 #include "dllist.hxx"
 #include <vector>
@@ -10,8 +10,6 @@ int main(int argc, char* argv[])
   int b = 3;
   int* c = &a;
   int* d = &b;
-  std::vector<int> v{ 1,2, 3, 5,4, 1};
-  std::initializer_list<int> asf{1,2,3};
   std::size_t n = 10;
 
   /**

@@ -40,7 +40,7 @@ struct xorptr_traits final {
 
 
 #ifdef CXX_XOR_PROJECT_USE_REINTERPRET_CAST
-#define xorptr_traits_defined 1
+#define xorptr_traits_defined true
 
 template <typename T>
 struct xorptr_traits final {
