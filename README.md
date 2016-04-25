@@ -1,6 +1,6 @@
 # doubly-linked-list-in-Cpp
 
-This program (in C++) implements a doubly-linked list using a single "pointer value" per node. This is realized by using bitwise exclusive-or (XOR). Here XOR is used to encode a linked pointer traversal:
+This program (in C++) implements a doubly-linked list using a single "pointer value" per node. This is realized by using bitwise exclusive-or (XOR) operation. Here XOR is used to encode a linked pointer traversal:
 
 1) the single "pointer value" stored in a node will be the XOR result of the preceding and following nodes'addresses, 
 
@@ -11,4 +11,4 @@ Usage
 
 Makefile is provided (requires compiler support for C++14).
 
-Can also use the executable main in bin/.
+Can also use the executable file main in bin/.
